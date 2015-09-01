@@ -21,6 +21,18 @@ include_directories(./include)
 add_library(${PROJECTNAME} SHARED ${folder_source} ${folder_header} )
 target_link_libraries(${PROJECTNAME})
 
+# Install the headers
+install(DIRECTORY ./include
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/include
+        FILES_MATCHING PATTERN "*.h*")
+
+# Install the library
+install(TARGETS ${PROJECTNAME}
+        EXPORT ${PROJECT_NAME}
+        ARCHIVE DESTINATION lib
+        LIBRARY DESTINATION lib)
+        
+
 # Create examples
 option (BUILD_EXAMPLES "Build examples" ON)
 if (BUILD_EXAMPLES)
