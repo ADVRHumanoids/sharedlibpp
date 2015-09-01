@@ -22,7 +22,7 @@ add_library(${PROJECTNAME} SHARED ${folder_source} ${folder_header} )
 target_link_libraries(${PROJECTNAME})
 
 # Install the headers
-install(DIRECTORY ./include
+install(DIRECTORY include/
         DESTINATION ${CMAKE_INSTALL_PREFIX}/include
         FILES_MATCHING PATTERN "*.h*")
 
