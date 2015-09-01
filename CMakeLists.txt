@@ -18,7 +18,7 @@ source_group("Source Files" FILES ${folder_source})
 source_group("Header Files" FILES ${folder_header})
 
 include_directories(./include)
-add_library(${PROJECTNAME} ${folder_source} ${folder_header} )
+add_library(${PROJECTNAME} SHARED ${folder_source} ${folder_header} )
 target_link_libraries(${PROJECTNAME})
 
 # Create examples
