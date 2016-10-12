@@ -23,3 +23,13 @@ ENDIF()
 
 ADD_EXECUTABLE(math_test math_test.cpp)
 
+# Install the include
+install(DIRECTORY .
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/include
+        FILES_MATCHING PATTERN "*.h*")
+ 
+# Install the library
+install(TARGETS mymath
+        EXPORT mymath
+        ARCHIVE DESTINATION lib
+        LIBRARY DESTINATION lib)
