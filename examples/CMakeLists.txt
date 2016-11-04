@@ -16,9 +16,9 @@ ADD_LIBRARY(mymath SHARED MyMath.cpp MyMath.h)
 
 
 IF(WIN32)
-    LINK_LIBRARIES(sharedlib++)
+    LINK_LIBRARIES(sharedlibpp)
 ELSE()
-    LINK_LIBRARIES(sharedlib++ dl)
+    LINK_LIBRARIES(sharedlibpp dl)
 ENDIF()
 
 ADD_EXECUTABLE(math_test math_test.cpp)

@@ -14,7 +14,7 @@ endif(COMMAND cmake_policy)
 
 include(ExternalProject)
 
-set(PROJECTNAME sharedlib++)
+set(PROJECTNAME sharedlibpp)
 project(${PROJECTNAME})
 
 
